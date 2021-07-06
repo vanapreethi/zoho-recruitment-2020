@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.Scanner;
+ 
+public class ZOHOTest
+{
+    public static void printStars(String str)
+    {
+        int i, j;
+       int n = str.length();
+        for(i=0; i<n; i++)
+        {
+ 
+            for(j=2*(n-i); j>=0; j--)
+            {
+                System.out.print(" ");
+            }
+            
+              	for(int m =str.length()/2; m < str.length()/2+i; m++)
+                {
+            		System.out.print(str.substring(m,m+1));
+                }
+            }
+             
+            System.out.println();
+        }
+    }
+ 
+    public static void main(String args[])
+    {
+        Scanner sc =new Scanner(System.in);
+		String str = sc.nextLine();
+        printStars(str);
+
+    }
+}
